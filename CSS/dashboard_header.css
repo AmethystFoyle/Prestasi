@@ -1,0 +1,34 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 2em;
+  align-items: center;
+  background-color: #2B2F31;
+  padding: 1em 2em;
+}
+.dashboard-header .dashboard-header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dashboard-header .dashboard-header-title #dashboard-header-title-title {
+  margin: 0;
+  font-size: 1.5em;
+}
+.dashboard-header .dashboard-header-title #dashboard-header-title-usertype-and-id {
+  margin: 0;
+  font-size: 0.8em;
+}
+.dashboard-header #dashboard-header-log-out {
+  background-color: #764242;
+}
+.dashboard-header > :nth-last-child(2) {
+  margin-left: auto;
+  gap: 5px;
+}/*# sourceMappingURL=dashboard_header.css.map */

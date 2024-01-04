@@ -1,0 +1,14 @@
+#login-signup-landing-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  color: #EFEFEF;
+  background-color: #1A1D1E;
+  max-width: 1000px;
+  margin: 0 auto;
+}/*# sourceMappingURL=main.css.map */

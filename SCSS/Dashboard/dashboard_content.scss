@@ -1,0 +1,17 @@
+@import "../Global/variables";
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+
+    .dashboard-content-items {
+        display: flex;
+
+        background-color: $dashboard-content-color;
+
+        margin-top: 3em;
+        padding: 3em 2em;
+
+        justify-content: space-around
+    }
+}

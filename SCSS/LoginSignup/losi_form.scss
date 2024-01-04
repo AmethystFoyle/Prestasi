@@ -1,0 +1,67 @@
+@import "../Global/variables";
+
+.losi-signin-signup-section {
+    margin-top: 7em;
+}
+
+// Parent form
+.losi-form-input {
+    display: none;
+    flex-direction: column;
+
+    align-items: center;
+
+    // Form without the language section
+    .losi-form-input-signin-container {
+        display: none;
+        flex-direction: column;
+        
+        margin: 1em 0;
+        
+        input {
+            width: 412px;
+            margin-top: 0.7em;
+
+            border: none;
+            background-color: $textbox-bg-color;
+
+            padding: 1em 0em 1em 1em;
+            box-shadow: none;
+
+            font-family: 'IBM Plex Mono', monospace;
+            color: $ui-highlighted;
+        }
+    }
+
+    // CONTINUE BUTTON
+    #losi-continue-btn {
+        margin-top: 3em;
+    }
+
+    // Form without the language section
+    .losi-form-input-signup-container {
+        flex-direction: column;
+        
+        margin: 1em 0;
+        
+        input {
+            width: 412px;
+            margin-top: 0.7em;
+            border: none;
+            background-color: $textbox-bg-color;
+            padding: 1em 0em 1em 1em;
+            box-shadow: none;
+            font-family: 'IBM Plex Mono', monospace;
+            color: $ui-highlighted;
+        }
+    }
+
+    // Language section
+    .losi-form-agents-language-container {
+        display: flex;
+        flex-direction: row;
+        gap: 26px;
+
+        margin-top: 0.7em;
+    }
+}

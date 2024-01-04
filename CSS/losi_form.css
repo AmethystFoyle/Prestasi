@@ -1,0 +1,47 @@
+.losi-signin-signup-section {
+  margin-top: 7em;
+}
+
+.losi-form-input {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.losi-form-input .losi-form-input-signin-container {
+  display: none;
+  flex-direction: column;
+  margin: 1em 0;
+}
+.losi-form-input .losi-form-input-signin-container input {
+  width: 412px;
+  margin-top: 0.7em;
+  border: none;
+  background-color: #2B2F31;
+  padding: 1em 0em 1em 1em;
+  box-shadow: none;
+  font-family: "IBM Plex Mono", monospace;
+  color: #FFE500;
+}
+.losi-form-input #losi-continue-btn {
+  margin-top: 3em;
+}
+.losi-form-input .losi-form-input-signup-container {
+  flex-direction: column;
+  margin: 1em 0;
+}
+.losi-form-input .losi-form-input-signup-container input {
+  width: 412px;
+  margin-top: 0.7em;
+  border: none;
+  background-color: #2B2F31;
+  padding: 1em 0em 1em 1em;
+  box-shadow: none;
+  font-family: "IBM Plex Mono", monospace;
+  color: #FFE500;
+}
+.losi-form-input .losi-form-agents-language-container {
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+  margin-top: 0.7em;
+}/*# sourceMappingURL=losi_form.css.map */

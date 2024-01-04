@@ -1,0 +1,11 @@
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-content .dashboard-content-items {
+  display: flex;
+  background-color: #2B2F31;
+  margin-top: 3em;
+  padding: 3em 2em;
+  justify-content: space-around;
+}/*# sourceMappingURL=dashboard_content.css.map */

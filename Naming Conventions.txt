@@ -1,0 +1,8 @@
+VARIABLES
+    LOCAL = userType;
+    GLOBAL = GLOBAL_USER_TYPE;
+    CONST = CONST_USER_TYPE
+
+FILES
+    NORMAL = maintitle.scss
+    TWO OR MORE WORDS = main_title.scss
