@@ -18,8 +18,11 @@
 </head>
 <body>
     <div class = "dashboard">
-        <?php include 'HTML/Dashboard/dashboard_header.html'; ?>
-        <?php include 'HTML/Dashboard/dashboard_content.html'; ?>
+
+        <?php include 'PHP/Dashboard/dashboardphp.php'; ?>
+
+        <?php include 'HTML/Dashboard/dashboard_header.php'; ?>
+        <?php include 'HTML/Dashboard/Agent/dashboard_agent_content.php'; ?>
         <?php include 'HTML/Global/debug.html'; ?>
     </div>
 

@@ -3,7 +3,7 @@
     <?php include 'PHP/DatabasePHP/mysqlconnect.php'; ?>
     <?php include 'PHP/LoginSignup/losi_content_php.php'; ?>
 
-    <form action = "index.php" method = "POST" id = "losi-form-signup">
+    <form action = "losi_content.php" method = "POST" id = "losi-form-signup">
         <div class = "btn-container">
             <button type="button" class = "btn-single" id = "losi-agent-btn" onclick = "toggleButtons('losi-agent-btn', 'losi-supplier-btn')">Agent</button>
             <button type="button" class = "btn-single" id = "losi-supplier-btn" onclick = "toggleButtons('losi-supplier-btn', 'losi-agent-btn')">Supplier</button>
@@ -57,57 +57,8 @@
 
             <?php
                 if(isset($_POST['submitted'])) {
-                   // losiGetInput();
-
-                   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $losi_userType = $_POST["user_type"];
-                    $losi_signInSignUpType = $_POST["signin_signup_type"];
-        
-                    $losi_signInID = $_POST["losi-form-signin-id-textbox"];
-                    $losi_signInPassword = $_POST["losi-form-signin-password-textbox"];
-        
-                    $losi_signUpID = $_POST["losi-form-signup-id-textbox"];
-                    $losi_signUpName = $_POST["losi-form-name-signup-textbox"];
-                    $losi_signUpPassword = $_POST["losi-form-password-signup-textbox"];
-        
-                    // SIGN IN
-                    if($losi_signInSignUpType == 'Sign In') {
-                         // AGENT
-                          if($losi_userType == 'Agent') {
-                             // START COMPARE DATABASE
-                          }
-                            
-                        // SUPPLIER
-                        elseif($losi_userType == 'Supplier') {
-                            echo "Supplier";
-                        }
-                    }
-                    // SIGN UP
-                    elseif($losi_signInSignUpType == 'Sign Up') {
-                        if($losi_userType == 'Agent') {
-        
-                            $conn = connectToDatabase();
-        
-                            $agentName = $_POST["losi-form-name-signup-textbox"];
-                            $agentID = $_POST["losi-form-signup-id-textbox"];
-                            $agentPassword = password_hash($_POST["losi-form-password-signup-textbox"], PASSWORD_DEFAULT); // Hash the password for security
-        
-                            $sql = "INSERT INTO agent (AgentID, AgentName, AgentPassword, AgentEmail) VALUES ('$agentID', '$agentName', '$agentPassword', '$agentID@example.com')";
-        
-                            if ($conn->query($sql) === TRUE) {
-                                echo "Agent added successfully";
-                                closeDatabaseConnection($conn);
-                            } else {
-                                $error_msg = "Error: " . $sql . "<br>" . $conn->error;
-                                closeDatabaseConnection($conn);
-                            }
-                        }
-                        elseif($losi_userType == 'Supplier') {
-                            echo "Supplier";
-                        }
-                    }
-                        
-                }
+                   losiGetInput();
+                   header("Location: dashboard_agent.php");
             }
             ?>
         </div>

@@ -20,7 +20,7 @@
     <!-- 1. Login Signup -->
     <div id = "login-signup-landing-page">
         <?php include 'HTML/LoginSignup/losi_header.html'; ?>
-        <?php include 'HTML/LoginSignup/losi_content.php'; ?>
+        <?php include 'losi_content.php'; ?>
         <?php include 'HTML/Global/debug.html'; ?>
     </div>
 

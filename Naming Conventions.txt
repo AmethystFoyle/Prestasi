@@ -6,3 +6,5 @@ VARIABLES
 FILES
     NORMAL = maintitle.scss
     TWO OR MORE WORDS = main_title.scss
+
+NANTI TRANSLATION BOLEH GUNA YANG SESSION TU!!!
