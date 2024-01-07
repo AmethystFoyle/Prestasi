@@ -1,6 +1,16 @@
 <?php
-$welcomeMessage = "Welcome, " . $_SESSION['losi_signUpName'];
-$agentID = "Agent - ID: " . $_SESSION['losi_signUpID'];
+
+$type = $_SESSION['losi_signInSignUpType'];
+
+if($type == "Sign In") {
+    $welcomeMessage = "Welcome, " . $_SESSION['losi_signInName'];
+    $agentID = "Agent - ID: " . $_SESSION['losi_signInID'];
+}
+
+elseif($type == "Sign Up") {
+    $welcomeMessage = "Welcome, " . $_SESSION['losi_signUpName'];
+    $agentID = "Agent - ID: " . $_SESSION['losi_signUpID'];
+}
 ?>
 
 <div class = "dashboard-header">

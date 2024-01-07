@@ -19,12 +19,13 @@ function losiGetInput() {
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+        $_SESSION['losi_signInSignUpType'] = $losi_signInSignUpType;
+
         // Check if keys are set before using them
         if (isset($losi_signInSignUpType)) {
             // SIGN IN
             if ($losi_signInSignUpType == 'Sign In') {
                 // AGENT
-                
                 if (isset($losi_userType) && $losi_userType == 'Agent') {
                     // Connect to the database
                     $conn = connectToDatabase();
@@ -36,14 +37,17 @@ function losiGetInput() {
                     if ($result->num_rows > 0) {
                         // Agent ID exists, verify password
                         $row = $result->fetch_assoc();
+                        $agentName = $row['AgentName'];
                         $storedPassword = $row['AgentPassword'];
 
                         if (password_verify($losi_signInPassword, $storedPassword)) {
-                            // Password is correct, redirect to agent dashboard
+                            // Password is correct, set session variables
                             $_SESSION['losi_signInID'] = $losi_signInID;
+                            $_SESSION['losi_signInName'] = $agentName;
+
+                            // Redirect to agent dashboard
                             header("Location: dashboard_agent.php");
                             exit;
-
                         } else {
                             // Incorrect password
                             $losi_errorMsg = "Incorrect password for Agent ID <i><span style='color: yellow;'>$losi_signInID</span></i>.";
@@ -53,8 +57,15 @@ function losiGetInput() {
                             header("Location: losi_result.php");
                             exit;
                         }
+                    } else {
+                        // Agent ID doesn't exist
+                        $losi_errorMsg = "Agent ID <i><span style='color: yellow;'>$losi_signInID</span></i> not found.";
+                        $_SESSION['losi_errorMsg'] = $losi_errorMsg;
+
+                        closeDatabaseConnection($conn);
+                        header("Location: losi_result.php");
+                        exit;
                     }
-                    
                 } elseif (isset($losi_userType) && $losi_userType == 'Supplier') {
                     echo "Supplier";
                 }
