@@ -75,11 +75,29 @@ function displaySignInForm() {
     // Loop through signUpContainers and set their display style
     for (let j = 0; j < signUpContainers.length; j++) {
         signUpContainers[j].style.display = 'none';
+        // Reset the value of input elements inside the signUpContainer
+        let inputs = signUpContainers[j].querySelectorAll('input');
+        for (let k = 0; k < inputs.length; k++) {
+            inputs[k].value = "";  // Reset the value
+        }
+        // Remove the 'required' attribute for sign-up elements
+        for (let k = 0; k < inputs.length; k++) {
+            inputs[k].removeAttribute('required');
+        }
     }
 
     // Loop through signInContainers and set their display style
     for (let k = 0; k < signInContainers.length; k++) {
         signInContainers[k].style.display = 'flex';
+        // Reset the value of input elements inside the signInContainer
+        let inputs = signInContainers[k].querySelectorAll('input');
+        for (let l = 0; l < inputs.length; l++) {
+            inputs[l].value = "";  // Reset the value
+        }
+        // Add the 'required' attribute for sign-in elements
+        for (let l = 0; l < inputs.length; l++) {
+            inputs[l].setAttribute('required', 'true');
+        }
     }
 }
 
@@ -96,10 +114,28 @@ function displaySignUpForm() {
     // Loop through signUpContainers and set their display style
     for (let j = 0; j < signUpContainers.length; j++) {
         signUpContainers[j].style.display = 'flex';
+        // Reset the value of input elements inside the signUpContainer
+        let inputs = signUpContainers[j].querySelectorAll('input');
+        for (let k = 0; k < inputs.length; k++) {
+            inputs[k].value = "";  // Reset the value
+        }
+        // Add the 'required' attribute for sign-up elements
+        for (let k = 0; k < inputs.length; k++) {
+            inputs[k].setAttribute('required', 'true');
+        }
     }
 
     // Loop through signInContainers and set their display style
     for (let k = 0; k < signInContainers.length; k++) {
         signInContainers[k].style.display = 'none';
+        // Reset the value of input elements inside the signInContainer
+        let inputs = signInContainers[k].querySelectorAll('input');
+        for (let l = 0; l < inputs.length; l++) {
+            inputs[l].value = "";  // Reset the value
+        }
+        // Remove the 'required' attribute for sign-in elements
+        for (let l = 0; l < inputs.length; l++) {
+            inputs[l].removeAttribute('required');
+        }
     }
 }

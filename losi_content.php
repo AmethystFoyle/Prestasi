@@ -25,25 +25,25 @@
             <!--Sign in-->
             <div class = "losi-form-input-signin-container">
                 <label for = "losi-form-id-label">Your ID</label>
-                <input type = "text" id = "losi-form-id-textbox" name = "losi-form-signin-id-textbox" placeholder = "Enter your ID">
+                <input type="text" id="losi-form-id-textbox" name="losi-form-signin-id-textbox" placeholder="Enter your ID - 4 digits only! No more, no less!" pattern="\d{4}" minlength="4" maxlength="4" required>
             </div>
             <div class = "losi-form-input-signin-container">
                 <label for = "losi-form-password-label">Password</label>
-                <input type = "password" id = "losi-form-password-textbox" name = "losi-form-signin-password-textbox" placeholder = "Enter your password">
+                <input type = "password" id = "losi-form-password-textbox" name = "losi-form-signin-password-textbox" placeholder = "Enter your password" autocomplete="off" required>
             </div>
     
             <!--Sign up-->
             <div class = "losi-form-input-signup-container">
                 <label for = "losi-form-id-signup-label">Your ID</label>
-                <input type = "text" id = "losi-form-id-signup-textbox" name = "losi-form-signup-id-textbox" placeholder = "Enter your ID" required>
+                <input type = "text" id = "losi-form-id-signup-textbox" name = "losi-form-signup-id-textbox" placeholder = "Enter your ID - 4 digits only! No more, no less!" pattern="\d{4}" minlength="4" maxlength="4" required>
             </div>
             <div class = "losi-form-input-signup-container">
                 <label for = "losi-form-name-signup-label">Your Name</label>
-                <input type = "text" id = "losi-form-name-signup-textbox" name = "losi-form-name-signup-textbox" placeholder = "Enter your name" required>
+                <input type = "text" id = "losi-form-name-signup-textbox" name = "losi-form-name-signup-textbox" placeholder = "Enter your name" autocomplete="off" required>
             </div>
             <div class = "losi-form-input-signup-container">
                 <label for = "losi-form-password-signup-label">Password</label>
-                <input type = "password" id = "losi-form-password-signup-textbox" name = "losi-form-password-signup-textbox" placeholder = "Enter your password" required>
+                <input type = "password" id = "losi-form-password-signup-textbox" name = "losi-form-password-signup-textbox" placeholder = "Enter your password" autocomplete="off" required>
             </div>
             <div class = "losi-form-input-container">
                 <label for = "losi-form-language-label">Interface Language</label>
@@ -58,9 +58,14 @@
             <?php
                 if(isset($_POST['submitted'])) {
                    losiGetInput();
-                   header("Location: dashboard_agent.php");
             }
             ?>
         </div>
     </form>
 </div>
+
+<!-- BUAT REQUIRED TU DYNAMIC KAT SIGNUP AND SIGN IN TU -->
+
+<?php
+ob_end_flush(); // Flush the output
+?>

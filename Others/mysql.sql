@@ -20,14 +20,16 @@ CREATE TABLE category (
 
 CREATE TABLE product (
     ProductID INT PRIMARY KEY,
+    AgentID INT,
     CategoryID INT,
     ProductName VARCHAR(255),
     ProductDescription VARCHAR(255),
-    ProductPrice INT,
-    ProductCost INT,
-    ProductWeight INT,
+    ProductPrice DECIMAL,
+    ProductCost DECIMAL,
+    ProductWeight DECIMAL,
     ProductStock INT,
-    FOREIGN KEY (CategoryID) REFERENCES category(CategoryID)
+    FOREIGN KEY (CategoryID) REFERENCES category(CategoryID),
+    FOREIGN KEY (AgentID) REFERENCES agent(AgentID)
 );
 
 CREATE TABLE orders (
@@ -56,6 +58,7 @@ CREATE TABLE sales (
     FOREIGN KEY (AgentID) REFERENCES agent(AgentID),
     FOREIGN KEY (ProductID) REFERENCES product(ProductID)
 );
+
 
 CREATE TABLE language (
     LanguageID INT PRIMARY KEY,
