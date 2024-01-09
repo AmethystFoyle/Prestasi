@@ -1,0 +1,11 @@
+.menu-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.menu-content .menu-content-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}/*# sourceMappingURL=product_details_content.css.map */

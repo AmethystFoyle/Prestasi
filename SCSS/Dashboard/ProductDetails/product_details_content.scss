@@ -1,0 +1,14 @@
+.menu-content {
+    display: flex;
+    flex-direction: row;
+
+    gap: 20px;
+
+    .menu-content-items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-grow: 1;
+    }
+}
+

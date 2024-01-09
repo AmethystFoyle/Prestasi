@@ -7,10 +7,13 @@ CREATE TABLE supplier (
 
 CREATE TABLE agent (
     AgentID INT PRIMARY KEY,
+    SupplierID INT,
     AgentName VARCHAR(255),
     AgentPassword VARCHAR(255),
-    AgentEmail VARCHAR(255)
+    AgentEmail VARCHAR(255),
+    FOREIGN KEY (SupplierID) REFERENCES supplier(SupplierID)
 );
+
 
 CREATE TABLE category (
     CategoryID INT PRIMARY KEY,

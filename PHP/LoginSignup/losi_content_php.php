@@ -67,14 +67,53 @@ function losiGetInput() {
                         exit;
                     }
                 } elseif (isset($losi_userType) && $losi_userType == 'Supplier') {
-                    echo "Supplier";
+                    // Connect to the database
+                    $conn = connectToDatabase();
+                
+                    // Check if Supplier ID exists
+                    $checkExistingID = "SELECT * FROM supplier WHERE SupplierID = '$losi_signInID'";
+                    $result = $conn->query($checkExistingID);
+                
+                    if ($result->num_rows > 0) {
+                        // Supplier ID exists, verify password
+                        $row = $result->fetch_assoc();
+                        $supplierName = $row['SupplierName'];
+                        $storedPassword = $row['SupplierPassword'];
+                
+                        if (password_verify($losi_signInPassword, $storedPassword)) {
+                            // Password is correct, set session variables
+                            $_SESSION['losi_signInID'] = $losi_signInID;
+                            $_SESSION['losi_signInName'] = $supplierName;
+                
+                            // Redirect to supplier dashboard
+                            header("Location: dashboard_supplier.php");
+                            exit;
+                        } else {
+                            // Incorrect password
+                            $losi_errorMsg = "Incorrect password for Supplier ID <i><span style='color: yellow;'>$losi_signInID</span></i>.";
+                            $_SESSION['losi_errorMsg'] = $losi_errorMsg;
+                
+                            closeDatabaseConnection($conn);
+                            header("Location: losi_result.php");
+                            exit;
+                        }
+                    } else {
+                        // Supplier ID doesn't exist
+                        $losi_errorMsg = "Supplier ID <i><span style='color: yellow;'>$losi_signInID</span></i> not found.";
+                        $_SESSION['losi_errorMsg'] = $losi_errorMsg;
+                
+                        closeDatabaseConnection($conn);
+                        header("Location: losi_result.php");
+                        exit;
+                    }
                 }
+                
             }
             // SIGN IN ENDS
 
             // SIGN UP
             elseif ($losi_signInSignUpType == 'Sign Up') {
-                if (isset($losi_userType)) {
+                if (isset($losi_userType) && $losi_userType == 'Agent') {
                     // Connect to the database
                     $conn = connectToDatabase();
 
@@ -99,19 +138,50 @@ function losiGetInput() {
                         $sql = "INSERT INTO agent (AgentID, AgentName, AgentPassword, AgentEmail) VALUES ('$losi_signUpID', '$losi_signUpName', '$losi_signUpPassword', '$losi_signUpID@prestasi.com')";
 
                         if ($conn->query($sql) === TRUE) {
-                            $success_msg = "Agent added successfully";
                             closeDatabaseConnection($conn);
-
                             // Redirect only after successful signup
                             header("Location: dashboard_agent.php");
                             exit;
+
                         } else {
-                            $error_msg = "Error: " . $sql . "<br>" . $conn->error . "<br><br><h2><a href='index.php'>Click here to go back!</a>";
                             closeDatabaseConnection($conn);
                         }
                     }
+                    
                 } elseif (isset($losi_userType) && $losi_userType == 'Supplier') {
-                    echo "Supplier";
+                    // Connect to the database
+                    $conn = connectToDatabase();
+            
+                    // Check if Supplier ID already exists
+                    $checkExistingID = "SELECT * FROM supplier WHERE SupplierID = '$losi_signUpID'";
+                    $result = $conn->query($checkExistingID);
+            
+                    if ($result->num_rows > 0) {
+                        // Supplier ID already exists
+                        $losi_errorMsg = "Supplier ID of <i><span style='color: yellow;'>" . $losi_signUpID . "</span></i> already exists. Please choose a different ID.";
+                        $_SESSION['losi_errorMsg'] = $losi_errorMsg;
+            
+                        closeDatabaseConnection($conn);
+                        header("Location: losi_result.php");
+                        exit;
+                    } else {
+                        // Supplier ID doesn't exist, proceed with signup
+                        $losi_signUpPassword = password_hash($_POST["losi-form-password-signup-textbox"], PASSWORD_DEFAULT) ?? null;
+                        $_SESSION['losi_signUpName'] = $losi_signUpName;
+                        $_SESSION['losi_signUpID'] = $losi_signUpID;
+            
+                        $sql = "INSERT INTO supplier (SupplierID, SupplierName, SupplierPassword, SupplierEmail) VALUES ('$losi_signUpID', '$losi_signUpName', '$losi_signUpPassword', '$losi_signUpID@prestasi.com')";
+            
+                        if ($conn->query($sql) === TRUE) {
+                            closeDatabaseConnection($conn);
+                            // Redirect only after successful signup
+                            header("Location: dashboard_supplier.php");
+                            exit;
+            
+                        } else {
+                            closeDatabaseConnection($conn);
+                        }
+                    }
                 }
             }
         }
