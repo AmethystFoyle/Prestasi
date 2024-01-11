@@ -1,0 +1,39 @@
+@import "../../../Global/variables";
+
+#make-order-content-form {
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+
+    .make-order-content {
+        display: flex;
+        flex-direction: column;
+
+        #make-order-order-btn {
+            margin-top: 2em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .make-order-content-items {
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 2em;
+
+            input {
+                width: 500px;
+                margin-top: 0.8em;
+
+                border: none;
+                background-color: $textbox-bg-color;
+
+                padding: 1em 0em 1em 1em;
+                box-shadow: none;
+
+                font-family: 'IBM Plex Mono', monospace;
+                color: $ui-highlighted;
+            }
+        }
+    }
+}

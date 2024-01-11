@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="CSS/ui.css">
 
     <link rel="stylesheet" href="CSS/main_container.css">
+    <link rel="stylesheet" href="CSS/make_order_content.css">
 </head>
 <body>
     <div class = "main-container">
         <?php include 'HTML/Dashboard/ProductDetails/MakeOrder/make_order_header.php'; ?>
+        <?php include 'HTML/Dashboard/ProductDetails/MakeOrder/make_order_content.php'; ?>
     </div>
 
     <!-- JAVASCRIPT ALL BELOW -->

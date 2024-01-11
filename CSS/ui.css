@@ -19,6 +19,11 @@
   width: 15em;
   height: 3em;
   position: relative;
+  transition: 0.2s;
+}
+.btn-single:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 .btn-single label {
   position: absolute;
@@ -36,6 +41,11 @@
   border: none;
   width: 25em;
   height: 6em;
+  transition: 0.2s;
+}
+.btn-single-big:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .btn-multiple {
@@ -46,6 +56,11 @@
   border: none;
   width: 15em;
   height: 3em;
+  transition: 0.2s;
+}
+.btn-multiple:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .btn-single-clicked {

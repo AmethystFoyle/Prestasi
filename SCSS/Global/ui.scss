@@ -24,6 +24,12 @@
     height: $btn-reg-height;
 
     position: relative;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
 
     label {
         position: absolute;
@@ -44,6 +50,12 @@
 
     width: $btn-big-width;
     height: $btn-big-height;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
 }
 
 .btn-multiple { // Multiple buttons' styling
@@ -56,6 +68,12 @@
 
     width: $btn-reg-width;
     height: $btn-reg-height;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
 }
 
 .btn-single-clicked { // For single button after clicked

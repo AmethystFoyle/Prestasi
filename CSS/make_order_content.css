@@ -1,0 +1,29 @@
+#make-order-content-form {
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+#make-order-content-form .make-order-content {
+  display: flex;
+  flex-direction: column;
+}
+#make-order-content-form .make-order-content #make-order-order-btn {
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+#make-order-content-form .make-order-content .make-order-content-items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+#make-order-content-form .make-order-content .make-order-content-items input {
+  width: 500px;
+  margin-top: 0.8em;
+  border: none;
+  background-color: #2B2F31;
+  padding: 1em 0em 1em 1em;
+  box-shadow: none;
+  font-family: "IBM Plex Mono", monospace;
+  color: #FFE500;
+}/*# sourceMappingURL=make_order_content.css.map */

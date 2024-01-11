@@ -36,11 +36,6 @@
         <p id = "menu-content-cost-title"><b>Cost</b></p>
         <p class = "menu-content-cost-items">RM92.30</p> <!-- LATER LOOP HERE. ITEM BANYAK MN LOOP BYK TU -->
     </div>
-
-    <div class = "menu-content-items" id = "product-details-menu-content-items-weight">
-        <p id = "menu-content-weight-title"><b>Weight</b></p>
-        <p class = "menu-content-weight-items">1.84KG</p> <!-- LATER LOOP HERE. ITEM BANYAK MN LOOP BYK TU -->
-    </div>
     
     <div class = "menu-content-items" id = "product-details-menu-content-items-quantity">
         <p id = "menu-content-quantity-title"><b>Quantity</b></p>
