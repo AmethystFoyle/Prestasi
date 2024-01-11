@@ -1,4 +1,59 @@
+@import "../../Global/variables";
+
+
 .main-container {
     display: flex;
     flex-direction: column;
+
+    .menu-header {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    
+        margin-top: 2em;
+        align-items: center;
+    
+        background-color: $dashboard-header-color;
+        padding: 1em 2em;
+        
+        .menu-header-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            #menu-header-title-title {
+                margin: 0;
+                font-size: 1.5em;
+            }
+    
+            #menu-header-title-extra-info {
+                margin: 0;
+                font-size: 0.8em;
+            }
+        }
+    
+        .menu-header-go-back-btn {
+            margin-left: auto;
+            gap: 5px;
+            transition: 0.2s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .menu-content {
+        display: flex;
+        flex-direction: row;
+    
+        gap: 20px;
+    
+        .menu-content-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-grow: 1;
+        }
+    }
 }
