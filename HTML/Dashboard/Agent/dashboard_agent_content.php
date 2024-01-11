@@ -3,7 +3,7 @@
         <a href = "product_details_agent.php"><button class = "btn-single-big" id = "dashboard-agent-content-1-btn">View Product Details</button></a>
     </div>
     <div class = "dashboard-content-items">
-        <a href = ""><button class = "btn-single-big" id = "dashboard-agent-content-3-btn">View Order Queue</button></a>
+        <a href = "order_queue_agent.php"><button class = "btn-single-big" id = "dashboard-agent-content-3-btn">View Order Queue</button></a>
     </div>
 </div>
 
