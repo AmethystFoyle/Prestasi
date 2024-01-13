@@ -16,10 +16,13 @@
     <link rel="stylesheet" href="CSS/main_container.css">
     <link rel="stylesheet" href="CSS/product_details_header.css">
     <link rel="stylesheet" href="CSS/product_details_content.css">
+
+    <link rel="stylesheet" href="CSS/product_details_content_supplier.css">
 </head>
 <body>
     <div class = "main-container">
         <?php include 'HTML/Dashboard/Supplier/ProductDetails/product_details_header_supplier.php'; ?>
+        <?php include 'HTML/Dashboard/Supplier/ProductDetails/product_details_content_supplier.php'; ?>
     </div>
 
     <!-- JAVASCRIPT ALL BELOW -->

@@ -1,0 +1,34 @@
+@import "../../Global/variables";
+
+.menu-content {
+
+    #product-details-items-buttons-edit-supplier {
+        margin-top: 4.6em;
+        flex: 2;
+
+        .product-details-items-edit-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 1.9em;
+        }
+
+        button {
+            border: none;
+            background-color: $btn-bg-color;
+            width: 100%;
+            height: 2.5em;
+
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8em;
+
+            color: white;
+
+            transition: 0.2s;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.6;
+            }
+        }
+    }
+}

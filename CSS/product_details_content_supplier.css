@@ -1,0 +1,23 @@
+.menu-content #product-details-items-buttons-edit-supplier {
+  margin-top: 4.6em;
+  flex: 2;
+}
+.menu-content #product-details-items-buttons-edit-supplier .product-details-items-edit-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9em;
+}
+.menu-content #product-details-items-buttons-edit-supplier button {
+  border: none;
+  background-color: #4C5155;
+  width: 100%;
+  height: 2.5em;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8em;
+  color: white;
+  transition: 0.2s;
+}
+.menu-content #product-details-items-buttons-edit-supplier button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}/*# sourceMappingURL=product_details_content_supplier.css.map */
