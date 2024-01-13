@@ -34,6 +34,8 @@ function losiGetInput() {
                     $checkExistingID = "SELECT * FROM agent WHERE AgentID = '$losi_signInID'";
                     $result = $conn->query($checkExistingID);
 
+                    $_SESSION['losi_userType'] = $losi_userType;
+
                     if ($result->num_rows > 0) {
                         // Agent ID exists, verify password
                         $row = $result->fetch_assoc();
@@ -73,6 +75,8 @@ function losiGetInput() {
                     // Check if Supplier ID exists
                     $checkExistingID = "SELECT * FROM supplier WHERE SupplierID = '$losi_signInID'";
                     $result = $conn->query($checkExistingID);
+
+                    $_SESSION['losi_userType'] = $losi_userType;
                 
                     if ($result->num_rows > 0) {
                         // Supplier ID exists, verify password

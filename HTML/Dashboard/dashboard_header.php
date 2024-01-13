@@ -3,13 +3,14 @@
 $type = $_SESSION['losi_signInSignUpType'];
 
 if($type == "Sign In") {
+    $user = $_SESSION['losi_userType'];
     $welcomeMessage = "Welcome, " . $_SESSION['losi_signInName'];
-    $agentID = "Agent - ID: " . $_SESSION['losi_signInID'];
+    $agentID = "$user - ID: " . $_SESSION['losi_signInID'];
 }
 
 elseif($type == "Sign Up") {
     $welcomeMessage = "Welcome, " . $_SESSION['losi_signUpName'];
-    $agentID = "Agent - ID: " . $_SESSION['losi_signUpID'];
+    $agentID = "$user - ID: " . $_SESSION['losi_signUpID'];
 }
 ?>
 
