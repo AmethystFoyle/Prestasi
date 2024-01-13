@@ -21,7 +21,8 @@
                 <input type = "radio" name = "signin_signup_type" value = "Sign Up" id="losi-signup-radio">Sign Up
             </div>
         </div>
-             <!--Sign in-->
+        <div class = "losi-form-input">
+            <!--Sign in-->
             <div class = "losi-form-input-signin-container">
                 <label for = "losi-form-id-label">Your ID</label>
                 <input type="text" id="losi-form-id-textbox" name="losi-form-signin-id-textbox" placeholder="Enter your ID - 4 digits only! No more, no less!" pattern="\d{4}" minlength="4" maxlength="4" required>
@@ -62,6 +63,8 @@
         </div>
     </form>
 </div>
+
+<!-- BUAT REQUIRED TU DYNAMIC KAT SIGNUP AND SIGN IN TU -->
 
 <?php
 ob_end_flush(); // Flush the output

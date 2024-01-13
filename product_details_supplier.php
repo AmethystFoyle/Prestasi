@@ -13,17 +13,13 @@
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/ui.css">
 
-    <link rel="stylesheet" href="CSS/dashboard_header.css">
-    <link rel="stylesheet" href="CSS/dashboard_content.css">
+    <link rel="stylesheet" href="CSS/main_container.css">
+    <link rel="stylesheet" href="CSS/product_details_header.css">
+    <link rel="stylesheet" href="CSS/product_details_content.css">
 </head>
 <body>
-    <div class = "dashboard">
-
-        <?php include 'PHP/Dashboard/dashboardphp.php'; ?>
-
-        <?php include 'HTML/Dashboard/dashboard_header.php'; ?>
-        <?php include 'HTML/Dashboard/Supplier/dashboard_supplier_content.php'; ?>
-        <?php include 'HTML/Global/debug.html'; ?>
+    <div class = "main-container">
+        <?php include 'HTML/Dashboard/Supplier/ProductDetails/product_details_header_supplier.php'; ?>
     </div>
 
     <!-- JAVASCRIPT ALL BELOW -->

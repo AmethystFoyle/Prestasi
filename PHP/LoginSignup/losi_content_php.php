@@ -93,6 +93,7 @@ function losiGetInput() {
                             header("Location: dashboard_supplier.php");
                             exit;
                         } else {
+                            
                             // Incorrect password
                             $losi_errorMsg = "Incorrect password for Supplier ID <i><span style='color: yellow;'>$losi_signInID</span></i>.";
                             $_SESSION['losi_errorMsg'] = $losi_errorMsg;
