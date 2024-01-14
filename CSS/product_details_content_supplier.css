@@ -20,4 +20,8 @@
 .menu-content #product-details-items-buttons-edit-supplier button:hover {
   cursor: pointer;
   opacity: 0.6;
+}
+
+.menu-content-supplier-add-new h4 {
+  text-align: center;
 }/*# sourceMappingURL=product_details_content_supplier.css.map */

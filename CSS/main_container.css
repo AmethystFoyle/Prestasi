@@ -42,4 +42,9 @@
   flex-direction: column;
   gap: 10px;
   flex-grow: 1;
+}
+.main-container .menu-content-supplier-add-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=main_container.css.map */

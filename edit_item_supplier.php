@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="CSS/main_container.css">
     <link rel="stylesheet" href="CSS/product_details_header.css">
     <link rel="stylesheet" href="CSS/product_details_content.css">
+    <link rel="stylesheet" href="CSS/edit_item_content_supplier.css">
 </head>
 <body>
     <div class = "main-container">

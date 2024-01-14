@@ -21,6 +21,8 @@
 </head>
 <body>
     <div class = "main-container">
+        <?php include 'PHP/Dashboard/Supplier/product_details_content_supplier_php.php'; ?>
+
         <?php include 'HTML/Dashboard/Supplier/ProductDetails/product_details_header_supplier.php'; ?>
         <?php include 'HTML/Dashboard/Supplier/ProductDetails/product_details_content_supplier.php'; ?>
     </div>
