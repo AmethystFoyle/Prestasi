@@ -42,6 +42,7 @@ function displayAllItems($supplierID) {
         
         // Header row
         echo '<tr>';
+        echo '<th>Items ID</th>';
         echo '<th>Items Name</th>';
         echo '<th>Category</th>';
         echo '<th>Cost</th>';
@@ -51,6 +52,7 @@ function displayAllItems($supplierID) {
         while ($row = $result->fetch_assoc()) {
             echo '<tr>';
 
+            echo '<td class = "add-new-item-supplier-table-items">' . $row['ProductID'] . '</td>';
             echo '<td class = "add-new-item-supplier-table-items">' . $row['ProductName'] . '</td>';
             echo '<td class = "add-new-item-supplier-table-items">' . $row['ProductCategory'] . '</td>';
             echo '<td class = "add-new-item-supplier-table-items">RM' . number_format($row['ProductCost'], 2) . '</td>';
