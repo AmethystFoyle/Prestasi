@@ -1,3 +1,17 @@
+<?php
+
+$type = $_SESSION['losi_signInSignUpType'];
+
+if($type == "Sign In") {
+    $supplierID = $_SESSION['losi_signInID'];
+}
+
+elseif($type == "Sign Up") {
+    $supplierID = $_SESSION['losi_signUpID'];
+}
+
+?>
+
 <div class = "menu-content">
 
     <?php include 'PHP/Dashboard/Supplier/add_new_item_supplier_php.php'; ?>
@@ -34,8 +48,9 @@
             <input type="hidden" name="submitted" value="TRUE" />
 
             <?php
+            
                 if(isset($_POST['submitted'])) {
-                    addNewItemSupplier();
+                    addNewItemSupplier($supplierID);
             }
             ?>
         </div>

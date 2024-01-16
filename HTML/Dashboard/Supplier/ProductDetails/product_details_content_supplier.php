@@ -1,6 +1,16 @@
 <?php include 'PHP/Dashboard/Supplier/add_new_item_supplier_php.php';
 
-    displayAllItems();
+$type = $_SESSION['losi_signInSignUpType'];
+
+if($type == "Sign In") {
+    $supplierID = $_SESSION['losi_signInID'];
+}
+
+elseif($type == "Sign Up") {
+    $supplierID = $_SESSION['losi_signUpID'];
+}
+
+    displayAllItems($supplierID);
 ?>
 
 <div class = "menu-content-supplier-add-new">

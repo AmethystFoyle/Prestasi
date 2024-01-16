@@ -21,6 +21,7 @@
 </head>
 <body>
     <div class = "main-container">
+        <?php include 'PHP/LoginSignup/losi_content_php.php'; ?>
         <?php include 'PHP/Dashboard/Supplier/product_details_content_supplier_php.php'; ?>
 
         <?php include 'HTML/Dashboard/Supplier/ProductDetails/product_details_header_supplier.php'; ?>

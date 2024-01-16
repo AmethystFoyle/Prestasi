@@ -18,7 +18,9 @@
 </head>
 <body>
 <?php include 'PHP/DatabasePHP/mysqlconnect.php'; ?>
-    <div class = "main-container">
+<div class = "main-container">
+    <?php include 'PHP/LoginSignup/losi_content_php.php'; ?>
+    
         <?php include 'HTML/Dashboard/Supplier/ProductDetails/AddItem/add_new_item_header_supplier.php'; ?>
         <?php include 'HTML/Dashboard/Supplier/ProductDetails/AddItem/add_new_item_content_supplier.php'; ?>
     </div>

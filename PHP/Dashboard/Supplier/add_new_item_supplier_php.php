@@ -1,7 +1,8 @@
+
 <?php
 ob_start(); // Start output buffering
 
-function addNewItemSupplier() {
+function addNewItemSupplier($supplierID) {
     // Check if the form is submitted
     if (isset($_POST['submitted'])) {
         // Retrieve values from the form
@@ -14,8 +15,8 @@ function addNewItemSupplier() {
         $conn = connectToDatabase();
 
         // Prepare and execute the SQL query to insert data
-        $sql = "INSERT INTO product (ProductID, ProductName, ProductCategory, ProductCost, ProductStock) 
-                VALUES ($itemID, '$itemName', '$category', $cost, $stock)";
+        $sql = "INSERT INTO product (ProductID, SupplierID, ProductCategory, ProductName, ProductCost, ProductStock) 
+                VALUES ($itemID, $supplierID, '$category', '$itemName', $cost, $stock)";
 
         if ($conn->query($sql) === TRUE) {
             echo "<br>New record created successfully";
@@ -28,12 +29,13 @@ function addNewItemSupplier() {
     }
 }
 
-function displayAllItems() {
+
+function displayAllItems($supplierID) {
     include 'PHP/DatabasePHP/mysqlconnect.php';
     $conn = connectToDatabase();
 
-    // Fetch all items from the product table
-    $result = $conn->query("SELECT * FROM product");
+    // Fetch items from the product table associated with the specific supplier
+    $result = $conn->query("SELECT * FROM product WHERE SupplierID = $supplierID");
 
     if ($result->num_rows > 0) {
         echo '<table class="product-details-content-supplier-table">';
@@ -66,6 +68,5 @@ function displayAllItems() {
     // Close the database connection
     closeDatabaseConnection($conn);
 }
-
 
 ?>
