@@ -2,7 +2,6 @@
 ob_start(); // Start output buffering
 
 function addNewItemSupplier() {
-
     // Check if the form is submitted
     if (isset($_POST['submitted'])) {
         // Retrieve values from the form
@@ -27,6 +26,46 @@ function addNewItemSupplier() {
         // Close the database connection
         closeDatabaseConnection($conn);
     }
-
 }
+
+function displayAllItems() {
+    include 'PHP/DatabasePHP/mysqlconnect.php';
+    $conn = connectToDatabase();
+
+    // Fetch all items from the product table
+    $result = $conn->query("SELECT * FROM product");
+
+    if ($result->num_rows > 0) {
+        echo '<table class="product-details-content-supplier-table">';
+        
+        // Header row
+        echo '<tr>';
+        echo '<th>Items Name</th>';
+        echo '<th>Category</th>';
+        echo '<th>Cost</th>';
+        echo '<th>Stock</th>';
+        echo '</tr>';
+
+        while ($row = $result->fetch_assoc()) {
+            echo '<tr>';
+
+            echo '<td class = "add-new-item-supplier-table-items">' . $row['ProductName'] . '</td>';
+            echo '<td class = "add-new-item-supplier-table-items">' . $row['ProductCategory'] . '</td>';
+            echo '<td class = "add-new-item-supplier-table-items">RM' . number_format($row['ProductCost'], 2) . '</td>';
+            echo '<td class = "add-new-item-supplier-table-items">' . $row['ProductStock'] . '</td>';
+            echo '<td id = "product-detail-td-btn-edit"><button class="btn-inside-table">Edit</button></td>';
+
+            echo '</tr>';
+        }
+
+        echo '</table>';
+    } else {
+        echo "<h2 style ='text-align: center; margin-top: 2em;'>Such empty... No products found!</h2>";
+    }
+
+    // Close the database connection
+    closeDatabaseConnection($conn);
+}
+
+
 ?>

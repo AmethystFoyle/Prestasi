@@ -1,30 +1,7 @@
-<div class = "menu-content">
-    <div class = "menu-content-items" id = "product-details-menu-content-items-items-name-supplier">
-        <p id = "menu-content-items-name-title"><b>Items Name</b></p>
-        <p class = "menu-content-items-name-items">iPhone 6s</p> <!-- LATER LOOP HERE. ITEM BANYAK MN LOOP BYK TU -->
-    </div>
+<?php include 'PHP/Dashboard/Supplier/add_new_item_supplier_php.php';
 
-    <div class = "menu-content-items" id = "product-details-menu-content-items-category-supplier">
-        <p id = "menu-content-category-title"><b>Category</b></p>
-        <p class = "menu-content-category-items">Food</p> <!-- LATER LOOP HERE. ITEM BANYAK MN LOOP BYK TU -->
-    </div>
-
-    <div class = "menu-content-items" id = "product-details-menu-content-items-cost-supplier">
-        <p id = "menu-content-cost-title"><b>Cost</b></p>
-        <p class = "menu-content-cost-items">RM92.30</p> <!-- LATER LOOP HERE. ITEM BANYAK MN LOOP BYK TU -->
-    </div>
-    
-    <div class = "menu-content-items" id = "product-details-menu-content-items-stock-supplier">
-        <p id = "menu-content-stock-title"><b>Stock</b></p>
-        <p class = "menu-content-stock-items">2</p> <!-- LATER LOOP HERE. ITEM BANYAK MN LOOP BYK TU -->
-    </div>
-
-    <div class = "menu-content-items" id = "product-details-items-buttons-edit-supplier">
-        <div class = "product-details-items-edit-btns">
-        <a href = "edit_item_supplier.php" class = "menu-content-edit-btns-btns"><button>Edit</button></a>
-        </div>
-    </div>
-</div>
+    displayAllItems();
+?>
 
 <div class = "menu-content-supplier-add-new">
         <br><br><br><br>

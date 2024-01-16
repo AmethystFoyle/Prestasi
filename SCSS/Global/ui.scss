@@ -76,6 +76,27 @@
     }
 }
 
+.btn-inside-table {
+    appearance: none;
+    background-color: $btn-bg-color;
+    color: $primary-color;
+
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+    border: none;
+
+    width: 150px;
+    height: 30px;
+
+    position: relative;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
 .btn-single-clicked { // For single button after clicked
     border: 4px solid $ui-highlighted;
 }

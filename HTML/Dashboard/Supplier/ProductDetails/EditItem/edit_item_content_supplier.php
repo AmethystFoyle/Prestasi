@@ -5,6 +5,10 @@
     <form action = "edit_item_supplier.php" method = "POST" id = "edit-item-supplier-content-form">
         <div class = "edit-item-supplier-content">
             <div class = "edit-item-supplier-items" id = "edit-item-supplier-item-name">
+                <label for = "edit-item-supplier-item-name-label">Item ID</label>
+                <input type = "text" id = "edit-item-supplier-item-name-textbox" name = "edit-item-supplier-item-name-textbox">
+            </div>
+            <div class = "edit-item-supplier-items" id = "edit-item-supplier-item-name">
                 <label for = "edit-item-supplier-item-name-label">Item Name</label>
                 <input type = "text" id = "edit-item-supplier-item-name-textbox" name = "edit-item-supplier-item-name-textbox">
             </div>

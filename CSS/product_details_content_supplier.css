@@ -1,13 +1,24 @@
-.menu-content #product-details-items-buttons-edit-supplier {
-  margin-top: 4.6em;
-  flex: 2;
-}
-.menu-content #product-details-items-buttons-edit-supplier .product-details-items-edit-btns {
+.menu-content-titles {
   display: flex;
-  flex-direction: column;
-  gap: 1.9em;
+  flex-direction: row;
 }
-.menu-content #product-details-items-buttons-edit-supplier button {
+
+.product-details-content-supplier-table {
+  margin-top: 2em;
+}
+.product-details-content-supplier-table th {
+  text-align: left;
+}
+.product-details-content-supplier-table .add-new-item-supplier-table-items {
+  text-align: left;
+  padding: 1em;
+  padding-left: 0;
+}
+.product-details-content-supplier-table #product-detail-td-btn-edit {
+  text-align: right;
+}
+
+.menu-content button {
   border: none;
   background-color: #4C5155;
   width: 100%;
@@ -17,7 +28,7 @@
   color: white;
   transition: 0.2s;
 }
-.menu-content #product-details-items-buttons-edit-supplier button:hover {
+.menu-content button:hover {
   cursor: pointer;
   opacity: 0.6;
 }

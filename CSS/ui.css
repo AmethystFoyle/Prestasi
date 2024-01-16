@@ -63,6 +63,25 @@
   opacity: 0.8;
 }
 
+.btn-inside-table {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #4C5155;
+  color: #EFEFEF;
+  font-family: "IBM Plex Mono", monospace;
+  text-align: center;
+  border: none;
+  width: 150px;
+  height: 30px;
+  position: relative;
+  transition: 0.2s;
+}
+.btn-inside-table:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .btn-single-clicked {
   border: 4px solid #FFE500;
 }
