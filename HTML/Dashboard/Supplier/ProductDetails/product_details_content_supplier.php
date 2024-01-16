@@ -1,6 +1,7 @@
 <?php include 'PHP/Dashboard/Supplier/add_new_item_supplier_php.php';
 
 $type = $_SESSION['losi_signInSignUpType'];
+$itemID = isset($_SESSION['itemID']) ? $_SESSION['itemID'] : null;
 
 if($type == "Sign In") {
     $supplierID = $_SESSION['losi_signInID'];
