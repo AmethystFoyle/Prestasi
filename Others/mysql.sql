@@ -14,25 +14,17 @@ CREATE TABLE agent (
     FOREIGN KEY (SupplierID) REFERENCES supplier(SupplierID)
 );
 
-
-CREATE TABLE category (
-    CategoryID INT PRIMARY KEY,
-    CategoryName VARCHAR(255),
-    CategoryDescription VARCHAR(255)
-);
-
 CREATE TABLE product (
     ProductID INT PRIMARY KEY,
     AgentID INT,
-    CategoryID INT,
+    SupplierID INT,
     ProductName VARCHAR(255),
-    ProductDescription VARCHAR(255),
     ProductPrice DECIMAL,
     ProductCost DECIMAL,
-    ProductWeight DECIMAL,
     ProductStock INT,
-    FOREIGN KEY (CategoryID) REFERENCES category(CategoryID),
-    FOREIGN KEY (AgentID) REFERENCES agent(AgentID)
+    ProductQuantity INT,
+    FOREIGN KEY (AgentID) REFERENCES agent(AgentID),
+    FOREIGN KEY (SupplierID) REFERENCES supplier(SupplierID)
 );
 
 CREATE TABLE orders (

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="CSS/add_item_content_supplier.css">
 </head>
 <body>
+<?php include 'PHP/DatabasePHP/mysqlconnect.php'; ?>
     <div class = "main-container">
         <?php include 'HTML/Dashboard/Supplier/ProductDetails/AddItem/add_new_item_header_supplier.php'; ?>
         <?php include 'HTML/Dashboard/Supplier/ProductDetails/AddItem/add_new_item_content_supplier.php'; ?>

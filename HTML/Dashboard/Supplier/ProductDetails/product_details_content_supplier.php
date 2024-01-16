@@ -14,9 +14,9 @@
         <p class = "menu-content-cost-items">RM92.30</p> <!-- LATER LOOP HERE. ITEM BANYAK MN LOOP BYK TU -->
     </div>
     
-    <div class = "menu-content-items" id = "product-details-menu-content-items-quantity-supplier">
-        <p id = "menu-content-quantity-title"><b>Quantity</b></p>
-        <p class = "menu-content-quantity-items">2</p> <!-- LATER LOOP HERE. ITEM BANYAK MN LOOP BYK TU -->
+    <div class = "menu-content-items" id = "product-details-menu-content-items-stock-supplier">
+        <p id = "menu-content-stock-title"><b>Stock</b></p>
+        <p class = "menu-content-stock-items">2</p> <!-- LATER LOOP HERE. ITEM BANYAK MN LOOP BYK TU -->
     </div>
 
     <div class = "menu-content-items" id = "product-details-items-buttons-edit-supplier">
