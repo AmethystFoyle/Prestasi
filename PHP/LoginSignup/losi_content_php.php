@@ -82,7 +82,7 @@ function losiGetInput() {
 
                     else {
                         // Supplier ID doesn't exist for the given Agent
-                        $losi_errorMsg = "Supplier ID <i><span style='color: yellow;'>$losi_signInsupplierID</span></i> not found for Agent.";
+                        $losi_errorMsg = "Supplier ID <i><span style='color: yellow;'>$losi_signInsupplierID</span></i> do not have the Agent with id <i><span style='color: yellow;'>$losi_signInID</span></i>.";
                         $_SESSION['losi_errorMsg'] = $losi_errorMsg;
             
                         closeDatabaseConnection($conn);
@@ -145,12 +145,14 @@ function losiGetInput() {
                     $conn = connectToDatabase();
 
                     // Check if Supplier ID already exists for Agent sign-up
-                    $checkExistingSupplierID = "SELECT * FROM agent WHERE SupplierID = '$losi_signUpsupplierID'";
+                    $checkExistingSupplierID = "SELECT * FROM supplier WHERE SupplierID = '$losi_signUpsupplierID'";
                     $resultExistingSupplier = $conn->query($checkExistingSupplierID);
+                    
+                    // This is to check whether the supplier ID exists or not. == 0 because it returns more than 0 if it exists as it
+                    // list out all the possible rows
+                    if ($resultExistingSupplier->num_rows == 0) {
 
-                    if ($resultExistingSupplier->num_rows > 0) {
-                        // Supplier ID already exists for the given Agent sign-up
-                        $losi_errorMsg = "Supplier ID of <i><span style='color: yellow;'>" . $losi_signUpsupplierID . "</span></i> already exists for Agent. Please choose a different ID.";
+                        $losi_errorMsg = "Supplier ID of <i><span style='color: yellow;'>" . $losi_signUpsupplierID . "</span></i> does not exist. Please try again.";
                         $_SESSION['losi_errorMsg'] = $losi_errorMsg;
 
                         closeDatabaseConnection($conn);

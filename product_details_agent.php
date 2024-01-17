@@ -19,6 +19,7 @@
 </head>
 <body>
     <div class = "main-container">
+        <?php include 'PHP/Dashboard/Agent/product_details_content_php.php' ?>
         <?php include 'HTML/Dashboard/ProductDetails/product_details_header.php'; ?>
         <?php include 'HTML/Dashboard/ProductDetails/product_details_content.php'; ?>
     </div>

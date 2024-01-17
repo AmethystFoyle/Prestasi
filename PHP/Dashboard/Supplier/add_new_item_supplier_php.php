@@ -17,8 +17,8 @@ function addNewItemSupplier($supplierID) {
         $conn = connectToDatabase();
 
         // Prepare and execute the SQL query to insert data
-        $sql = "INSERT INTO product (ProductID, SupplierID, ProductCategory, ProductName, ProductCost, ProductStock) 
-                VALUES ($itemID, $supplierID, '$category', '$itemName', $cost, $stock)";
+        $sql = "INSERT INTO product (ProductID, SupplierID, ProductCategory, ProductName, ProductCost, ProductStock, ProductQuantity, ProductPrice) 
+                VALUES ($itemID, $supplierID, '$category', '$itemName', $cost, $stock, 0, $cost)";
 
         try {
             if ($conn->query($sql) === TRUE) {
@@ -64,11 +64,11 @@ function displayAllItems($supplierID) {
             echo '<tr>';
             
             $itemID = $row['ProductID']; // Get the item ID for the current iteration
-            echo '<td class="add-new-item-supplier-table-items">' . $itemID . '</td>';
-            echo '<td class="add-new-item-supplier-table-items">' . $row['ProductName'] . '</td>';
-            echo '<td class="add-new-item-supplier-table-items">' . $row['ProductCategory'] . '</td>';
-            echo '<td class="add-new-item-supplier-table-items">RM' . number_format($row['ProductCost'], 2) . '</td>';
-            echo '<td class="add-new-item-supplier-table-items">' . $row['ProductStock'] . '</td>';
+            echo '<td class="product-details-agent-content">' . $itemID . '</td>';
+            echo '<td class="product-details-agent-content">' . $row['ProductName'] . '</td>';
+            echo '<td class="product-details-agent-content">' . $row['ProductCategory'] . '</td>';
+            echo '<td class="product-details-agent-content">RM' . number_format($row['ProductCost'], 2) . '</td>';
+            echo '<td class="product-details-agent-content">' . $row['ProductStock'] . '</td>';
             echo '<td id="product-detail-td-btn-edit"><a href="edit_item_supplier.php?item_id=' . $itemID . '"><button class="btn-inside-table">Edit</button></a></td>';
             
             // Update the session variable with the current item ID

@@ -72,8 +72,6 @@
     </form>
 </div>
 
-<!-- BUAT REQUIRED TU DYNAMIC KAT SIGNUP AND SIGN IN TU -->
-
 <?php
 ob_end_flush(); // Flush the output
 ?>
