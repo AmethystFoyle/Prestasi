@@ -23,6 +23,10 @@
         </div>
         <div class = "losi-form-input">
             <!--Sign in-->
+            <div class = "losi-form-input-signin-container" id = "losi-form-sign-in-supplier-id">
+                <label for = "losi-form-supplier-id-label">Supplier ID</label>
+                <input type="text" id="losi-form-supplier-sign-in-id-textbox" name="losi-form-signin-supplier-id-textbox" placeholder="Enter the supplier ID" pattern="\d{4}" minlength="4" maxlength="4" required>
+            </div>
             <div class = "losi-form-input-signin-container">
                 <label for = "losi-form-id-label">Your ID</label>
                 <input type="text" id="losi-form-id-textbox" name="losi-form-signin-id-textbox" placeholder="Enter your ID - 4 digits only! No more, no less!" pattern="\d{4}" minlength="4" maxlength="4" required>
@@ -33,6 +37,10 @@
             </div>
     
             <!--Sign up-->
+            <div class = "losi-form-input-signup-container" id = "losi-form-sign-up-supplier-id">
+                <label for = "losi-form-supplier-id-label">Supplier ID</label>
+                <input type="text" id="losi-form-sign-up-supplier-id-textbox" name="losi-form-signup-supplier-id-textbox" placeholder="Enter the supplier ID" pattern="\d{4}" minlength="4" maxlength="4" required>
+            </div>
             <div class = "losi-form-input-signup-container">
                 <label for = "losi-form-id-signup-label">Your ID</label>
                 <input type = "text" id = "losi-form-id-signup-textbox" name = "losi-form-signup-id-textbox" placeholder = "Enter your ID - 4 digits only! No more, no less!" pattern="\d{4}" minlength="4" maxlength="4" required>

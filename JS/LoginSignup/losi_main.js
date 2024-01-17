@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('losi-agent-btn').click();
     document.getElementById('losi-user-type-form-agent').checked = true;
 
+    GLOBAL_USER_TYPE = 'Agent';
+
     // If click the agent button
     document.getElementById('losi-agent-btn').addEventListener('click', function () {
         toggleButtons('losi-agent-btn', 'losi-supplier-btn');
@@ -15,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         setDebug("debug-global-user-type", GLOBAL_USER_TYPE);
         setDebug("debug-global-last-clicked-btn", GLOBAL_LAST_CLICKED_BTN_ID);
+
+        toggleSupplierIDVisibility();
     });
 
     // If click the supplier button
@@ -25,17 +29,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
         setDebug("debug-global-user-type", GLOBAL_USER_TYPE);
         setDebug("debug-global-last-clicked-btn", GLOBAL_LAST_CLICKED_BTN_ID);
+
+        toggleSupplierIDVisibility();
     });
 
      // If click the SIGN IN button
     document.getElementById('losi-signin-btn').addEventListener('click', function () {
         toggleButtons('losi-signin-btn', 'losi-signup-btn');
         toggleRadioButtonsLosi('losi-signin-radio');
+
+        toggleSupplierIDVisibility();
     });
 
     document.getElementById('losi-signup-btn').addEventListener('click', function () {
         toggleButtons('losi-signup-btn', 'losi-signin-btn');
         toggleRadioButtonsLosi('losi-signup-radio');
+
+        toggleSupplierIDVisibility();
     });
 });
 
@@ -66,6 +76,7 @@ function displaySignInForm() {
     let formInputs = document.getElementsByClassName('losi-form-input');
     let signUpContainers = document.getElementsByClassName('losi-form-input-signup-container');
     let signInContainers = document.getElementsByClassName('losi-form-input-signin-container');
+
 
     // Loop through formInputs and set their display style
     for (let i = 0; i < formInputs.length; i++) {
@@ -136,6 +147,52 @@ function displaySignUpForm() {
         // Remove the 'required' attribute for sign-in elements
         for (let l = 0; l < inputs.length; l++) {
             inputs[l].removeAttribute('required');
+        }
+    }
+}
+
+function toggleSupplierIDVisibility() {
+    // Get the Supplier ID textbox element for sign up
+    let signUpSupplierIDTextboxContainer = document.getElementById('losi-form-sign-up-supplier-id');
+    let signInSupplierIDTextboxContainer = document.getElementById('losi-form-sign-in-supplier-id');
+
+    let signInSupplierIDTextbox = document.getElementById('losi-form-supplier-sign-in-id-textbox');
+    let signUpSupplierIDTextbox = document.getElementById('losi-form-sign-up-supplier-id-textbox');
+
+    // Toggle visibility based on the value of GLOBAL_USER_TYPE
+    if (GLOBAL_USER_TYPE === 'Supplier') {
+
+        // If click sign up
+        if(GLOBAL_LAST_CLICKED_BTN_ID === 'losi-signup-btn') {
+            signUpSupplierIDTextboxContainer.style.display = 'none';
+            signUpSupplierIDTextbox.removeAttribute('required');
+
+            signInSupplierIDTextboxContainer.style.display = 'none';
+            signInSupplierIDTextbox.removeAttribute('required');
+
+        // If click sign in
+        } else {
+            signInSupplierIDTextboxContainer.style.display = 'none';
+            signInSupplierIDTextbox.removeAttribute('required');
+
+            signUpSupplierIDTextboxContainer.style.display = 'none';
+            signUpSupplierIDTextbox.removeAttribute('required');
+        }
+
+    } else if (GLOBAL_USER_TYPE === 'Agent') {
+
+        if(GLOBAL_LAST_CLICKED_BTN_ID === 'losi-signup-btn') {
+            signUpSupplierIDTextboxContainer.style.display = 'flex';
+            signUpSupplierIDTextbox.setAttribute('required', 'true');
+
+            signInSupplierIDTextboxContainer.style.display = 'none';
+            signInSupplierIDTextbox.removeAttribute('required');
+        } else {
+            signInSupplierIDTextboxContainer.style.display = 'flex';
+            signInSupplierIDTextbox.setAttribute('required', 'true');
+
+            signUpSupplierIDTextboxContainer.style.display = 'none';
+            signUpSupplierIDTextbox.removeAttribute('required');
         }
     }
 }
