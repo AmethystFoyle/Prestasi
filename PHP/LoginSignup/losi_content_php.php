@@ -56,6 +56,7 @@ function losiGetInput() {
                                 // Password is correct, set session variables
                                 $_SESSION['losi_signInID'] = $losi_signInID;
                                 $_SESSION['losi_signInName'] = $agentName;
+                                $_SESSION['losi_signInsupplierID'] = $losi_signInsupplierID;
     
                                 // Redirect to agent dashboard
                                 header("Location: dashboard_agent.php");

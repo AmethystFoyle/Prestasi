@@ -28,13 +28,13 @@ CREATE TABLE product (
 );
 
 CREATE TABLE orders (
-    OrderID INT PRIMARY KEY,
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,
     AgentID INT,
     ProductID INT,
     OrderQuantity INT,
-    OrderStatus VARCHAR(255),
-    OrderDate DATE,
-    ShippedDate DATE,
+    OrderCustomerName VARCHAR(255),
+    OrderCustomerAddress VARCHAR(255),
+    OrderCustomerContactNumber VARCHAR(255),
     FOREIGN KEY (AgentID) REFERENCES agent(AgentID),
     FOREIGN KEY (ProductID) REFERENCES product(ProductID)
 );

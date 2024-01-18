@@ -3,14 +3,12 @@
 $type = $_SESSION['losi_signInSignUpType'];
 $itemID = isset($_SESSION['itemID']) ? $_SESSION['itemID'] : null;
 
-$supplierID = $_SESSION['losi_supplierID'];
-
 if($type == "Sign In") {
-    $supplierID = $_SESSION['losi_signInID'];
+    $supplierID = $_SESSION['losi_signInsupplierID'];
 }
 
 elseif($type == "Sign Up") {
-    $supplierID = $_SESSION['losi_signUpID'];
+    $supplierID = $_SESSION['losi_signUpsupplierID'];
 }
 
     displayAllItemsAgent($supplierID);
