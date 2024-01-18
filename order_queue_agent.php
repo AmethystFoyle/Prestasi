@@ -17,6 +17,9 @@
 </head>
 <body>
     <div class = "main-container">
+
+        <?php include 'PHP/Dashboard/Agent/order_queue_content_agent.php'; ?>
+
         <?php include 'HTML/Dashboard/Agent/OrderQueue/order_queue_header_agent.php'; ?>
         <?php include 'HTML/Dashboard/Agent/OrderQueue/order_queue_content_agent.php'; ?>
     </div>

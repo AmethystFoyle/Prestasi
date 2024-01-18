@@ -54,8 +54,8 @@ function makeOrder() {
 
     } else {
         // Perform the SQL INSERT operation
-        $insertQuery = "INSERT INTO orders (AgentID, ProductID, OrderQuantity, OrderCustomerName, OrderCustomerAddress, OrderCustomerContactNumber)
-                        VALUES ($agentID, $productID, $orderQuantity, '$customerName', '$customerAddress', '$customerContactNumber')";
+        $insertQuery = "INSERT INTO orders (AgentID, ProductID, OrderQuantity, OrderCustomerName, OrderCustomerAddress, OrderCustomerContactNumber, OrderStatus)
+                        VALUES ($agentID, $productID, $orderQuantity, '$customerName', '$customerAddress', '$customerContactNumber', 'Pending')";
 
         if ($conn->query($insertQuery) === TRUE) {
             echo "<br>Order placed successfully!<br>";

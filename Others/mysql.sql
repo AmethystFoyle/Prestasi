@@ -17,6 +17,7 @@ CREATE TABLE agent (
 CREATE TABLE product (
     ProductID INT PRIMARY KEY,
     AgentID INT,
+    OrderID INT,
     SupplierID INT,
     ProductName VARCHAR(255),
     ProductPrice DECIMAL,
@@ -24,7 +25,8 @@ CREATE TABLE product (
     ProductStock INT,
     ProductQuantity INT,
     FOREIGN KEY (AgentID) REFERENCES agent(AgentID),
-    FOREIGN KEY (SupplierID) REFERENCES supplier(SupplierID)
+    FOREIGN KEY (SupplierID) REFERENCES supplier(SupplierID),
+    FOREIGN KEY (OrderID) REFERENCES orders(OrderID)
 );
 
 CREATE TABLE orders (
@@ -35,6 +37,7 @@ CREATE TABLE orders (
     OrderCustomerName VARCHAR(255),
     OrderCustomerAddress VARCHAR(255),
     OrderCustomerContactNumber VARCHAR(255),
+    OrderStatus VARCHAR(255),
     FOREIGN KEY (AgentID) REFERENCES agent(AgentID),
     FOREIGN KEY (ProductID) REFERENCES product(ProductID)
 );
