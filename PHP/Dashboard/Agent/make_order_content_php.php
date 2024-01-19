@@ -1,4 +1,5 @@
 <?php
+include 'PHP/LoginSignup/losi_content_php.php';
 include 'PHP/DatabasePHP/mysqlconnect.php';
 function showMakeOrderData() {
     $conn = connectToDatabase();
@@ -31,7 +32,6 @@ function showMakeOrderData() {
 
 function makeOrder() {
     $conn = connectToDatabase();
-    include 'PHP/LoginSignup/losi_content_php.php';
     $type = $_SESSION['losi_signInSignUpType'];
 
     if($type == "Sign In") {

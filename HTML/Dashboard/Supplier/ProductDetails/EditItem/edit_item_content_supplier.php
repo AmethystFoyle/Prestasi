@@ -101,8 +101,7 @@
                     // Execute the update
                     if ($conn->query($query) === TRUE) {
                         // Success message
-                        echo "Update successful!";
-                        echo "Default Item ID: " . "$defaultItemID";
+                        echo "Update successful!<br>";
                     } else {
                         // Error message
                         echo "Error updating record: " . $conn->error;
