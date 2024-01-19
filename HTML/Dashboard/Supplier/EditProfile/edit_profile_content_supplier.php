@@ -18,9 +18,9 @@ elseif($type == "Sign Up") {
 
     <form action = "edit_profile_supplier.php" method = "POST" id = "edit-profile-supplier-content-form">
         <div class = "edit-profile-supplier-content">
-            <div class = "edit-profile-content-items" id = "edit-profile-supplier-id">
+            <div class = "edit-profile-content-items edit-profile-content-disabled" id = "edit-profile-supplier-id">
                 <label for = "make-order-product-name-label">Supplier ID</label>
-                <input type = "text" id = "edit-profile-supplier-id-textbox" name = "edit-profile-supplier-id-textbox" value="<?php echo $supplierID; ?>" pattern="\d{4}" minlength="4" maxlength="4">
+                <input type = "text" id = "edit-profile-supplier-id-textbox" name = "edit-profile-supplier-id-textbox" value="<?php echo $supplierID; ?>" pattern="\d{4}" minlength="4" maxlength="4" readonly>
             </div>
             <div class = "edit-profile-content-items" id = "edit-profile-supplier-name">
                 <label for = "make-order-category-label">Supplier's Name</label>
@@ -34,8 +34,8 @@ elseif($type == "Sign Up") {
 
             <input class = "btn-single" id = "edit-profile-supplier-save-changes-btn" type = "submit" value = "Save Changes">
             <input type="hidden" name="submitted" value="TRUE" />
+            <?php include 'HTML/Dashboard/Supplier/EditProfile/edit_profile_content_supplier_php.php'; ?>
         </div>
     </form>
 </div>
 
-<?php include 'HTML/Dashboard/Supplier/EditProfile/edit_profile_content_supplier_php.php'; ?>
