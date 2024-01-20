@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translation>
+    <word>
+        <english>English</english>
+        <malay>Melayu</malay>
+    </word>
+    <word>
+        <english>add_new_item_supplier</english>
+        <malay>tambah item pembekal baru</malay>
+    </word>
+    <word>
+        <english>dashboard_agent</english>
+        <malay>dashboard_ejen</malay>
+    </word>
+    <word>
+        <english>dashboard_supplier</english>
+        <malay>dashboard_pembekal</malay>
+    </word>
+    <word>
+        <english>edit_item_supplier</english>
+        <malay>sunting_item_pembekal</malay>
+    </word>
+    <word>
+        <english>edit_profile_agent</english>
+        <malay>sunting_profil_ejen</malay>
+    </word>
+    <word>
+        <english>edit_profile_supplier</english>
+        <malay>sunting_profil_pembekal</malay>
+    </word>
+    <word>
+        <english>make_order_agent</english>
+        <malay>buat_pesanan_ejen</malay>
+    </word>
+    <word>
+        <english>order_queue_agent</english>
+        <malay>buat_pesanan_ejen</malay>
+    </word>
+    <word>
+        <english>product_details_agent</english>
+        <malay>butiran_produk_ejen</malay>
+    </word>
+    <word>
+        <english>product_details_supplier</english>
+        <malay>butiran_produk_pembekal</malay>
+    </word>
+    <word>
+        <english>edit_profile_header_agent</english>
+        <malay>sunting_profil_header_ejen</malay>
+    </word>
+    <word>
+        <english>Agent</english>
+        <malay>Ejen</malay>
+    </word>
+    <word>
+        <english>Supplier</english>
+        <malay>Pembekal</malay>
+    </word>
+    <word>
+        <english>Sign Up</english>
+        <malay>Daftar</malay>
+    </word>
+    <word>
+        <english>Sign In</english>
+        <malay>Daftar Masuk</malay>
+    </word>
+    <word>
+        <english>Your ID</english>
+        <malay>ID Anda</malay>
+    </word>
+    <word>
+        <english>Password</english>
+        <malay>Kata Laluan</malay>
+    </word>
+    <word>
+        <english>Interface Language</english>
+        <malay>Bahasa</malay>
+    </word>
+    <word>
+        <english>ERROR</english>
+        <malay>RALAT</malay>
+    </word>
+    <word>
+        <english>Your error:</english>
+        <malay>Ralat anda</malay>
+    </word>
+    <word>
+        <english>Agent_ID</english>
+        <malay>ID_Ejen</malay>
+    </word>
+    <word>
+        <english>Agent's Name</english>
+        <malay>Nama Ejen</malay>
+    </word>
+    <word>
+        <english>New Password</english>
+        <malay>Kata Laluan Baru</malay>
+    </word>
+    <word>
+        <english>View Product Details</english>
+        <malay>Lihat Butiran Produk</malay>
+    </word>
+    <word>
+        <english>View Order Queue</english>
+        <malay>Lihat Senarai Pesanan</malay>
+    </word>
+    <word>
+        <english>item_name</english>
+        <malay>nama_item</malay>
+    </word>
+    <word>
+        <english>Supplier ID</english>
+        <malay>ID Pembekal</malay>
+    </word>
+    <word>
+        <english>Supplier's Name</english>
+        <malay>Nama Pembekal</malay>
+    </word>
+    <word>
+        <english>Product Name</english>
+        <malay>Nama Produk</malay>
+    </word>
+    <word>
+        <english>Category</english>
+        <malay>Kategori</malay>
+    </word>
+    <word>
+        <english>Quantity (That Can Be Sold)</english>
+        <malay>Kuantiti (Yang Boleh Dijual)</malay>
+    </word>
+    <word>
+        <english>Stock (In Warehouse)</english>
+        <malay>Stok (Di Gudang)</malay>
+    </word>
+    <word>
+        <english>Restock Order (Amount Not More Than Stock)</english>
+        <malay>Order Semula (Jumlah Tidak Lebih Dari Stok)</malay>
+    </word>
+    <word>
+        <english>Order Queue</english>
+        <malay>Senarai Pesanan</malay>
+    </word>
+    <word>
+        <english>Go Back</english>
+        <malay>Ulang Balik</malay>
+    </word>
+    <word>
+        <english>View Restock Queue</english>
+        <malay>Lihat Senarai Restok</malay>
+    </word>
+    <word>
+</translation>
